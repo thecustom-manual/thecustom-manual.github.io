@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>더커스텀 교육 매뉴얼 2차</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="bootScreen" class="boot"><div class="boot-mark">TC</div><strong>더커스텀 교육 시스템</strong><span>교육 데이터를 안전하게 불러오는 중입니다.</span></div>
+<div class="app" id="app" hidden>
+<header class="topbar">
+  <div class="brand"><div class="brand-logo">TC</div><div><b>더커스텀</b><span>TRAINING CENTER</span></div></div>
+  <div class="course-head"><span>정규 교육 과정</span><b>교육 매뉴얼 · 2차</b></div>
+  <div class="course-status"><div><span>과정 진행</span><b id="progressLabel">1 / 37</b></div><div class="progress-line"><i id="progressFill"></i></div></div>
+  <div class="elapsed"><span>학습 시간</span><b id="elapsedTime">00:00:00</b></div>
+  <button id="resetBtn" class="quiet-btn">처음부터</button>
+</header>
+<aside class="sidebar">
+  <div class="sidebar-caption">COURSE INDEX</div>
+  <nav id="nav"></nav>
+  <div class="mentor"><img src="assets/boradori-generated.png" alt="보라돌이"><div><b>보라돌이</b><span>교육 안내 담당</span></div><p>설명 청취와 실습을 모두 완료해야 다음 단계가 열립니다.</p></div>
+  <button id="devTrigger" class="copyright" aria-label="copyright">© THE CUSTOM · EDU V2</button>
+</aside>
+<main class="stage">
+  <div class="voice-strip" id="voiceStrip">
+    <div class="voice-avatar"><img src="assets/boradori-generated.png" alt=""></div>
+    <div class="voice-copy"><span>보라돌이 나레이션</span><b id="voiceState">교육 시작 대기</b></div>
+    <div class="voice-dots"><i></i><i></i><i></i></div>
+    <button id="replayBtn" class="replay" disabled>다시 듣기</button>
+  </div>
+  <section id="viewport" class="viewport"></section>
+  <footer class="pager"><button id="prevBtn" class="page-btn secondary">← 이전</button><div class="pager-center"><span id="pageKicker">MODULE 01</span><b id="pageCounter">1 / 37</b></div><button id="nextBtn" class="page-btn primary" disabled>나레이션 완료 후 이동</button></footer>
+</main>
+<div id="toast" class="toast"></div>
+<div id="zoom" class="zoom"><button>×</button><img alt=""></div>
+</div>
+<script src="course-data.js"></script>
+<script src="app.js"></script>
+</body></html>
